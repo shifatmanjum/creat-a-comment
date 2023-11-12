@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>how to creat a comment</title>
+</head>
+
+<body style="background-color: blueviolet;">
+    <section id="container">
+        <div id="comment-container">
+            <h1 style="background-color: brown; text-align: center;">How to creat a comment box by Kh shifat manjum</h1>
+
+
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate quibusdam non deserunt!
+                Eius,
+                soluta vero optio delectus et, eaque sed, ratione atque quod porro perspiciatis cupiditate
+                quidem
+                similique qui voluptatum. Consequuntur delectus obcaecati, eius, saepe quia quibusdam eligendi
+                repellat ipsum impedit, dolores distinctio ducimus minus praesentium minima assumenda nostrum
+                cupiditate.</p>
+
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, soluta qui cupiditate porro
+                corporis nobis ducimus dignissimos architecto quis? Quis, et assumenda reiciendis aliquid hic
+                explicabo! Adipisci reprehenderit voluptates nesciunt minima libero cupiditate fugit voluptatum
+                dignissimos, quae vitae. Perspiciatis, ducimus beatae excepturi recusandae eius iste cumque
+                voluptas! Tenetur, quidem debitis?</p>
+
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut nesciunt vel, eius culpa ipsum ea
+                corporis illo, et aliquid dignissimos officiis, enim sed nam corrupti. Aut reprehenderit eius
+                tempora illo!</p>
+            <h1 style="background-color: rgb(79, 198, 36); text-align: center;"> make a comment shifat manjum</h1>
+
+
+        </div>
+        <textarea id="text-area" rows="5" cols="60"></textarea>
+        <button style="" id="post-button">post</button>
+    </section>
+    <script>
+        //first trgating the button
+        document.getElementById('post-button').addEventListener('click', function () {
+
+            //2nd getting text area for write the future comment
+            const GetTextArea = document.getElementById('text-area');
+            //putting comment as value of text area
+            const valueTextArea = GetTextArea.value;
+            //now tragatting the container which ic comment-container to put the added comment for,as a <p> tag
+            const deployComent = document.getElementById('comment-container');
+            //now creating the <p> tag which is till now absebce
+
+            const creatPeragraph = document.createElement('p');
+            //now innertext is creating but puting comment on the textarea and will be added comment as a value
+            creatPeragraph.innerText = valueTextArea;
+            // now  deployComment is being added as a child of creatParagraph 
+
+            deployComent.appendChild(creatPeragraph);
+            GetTextArea.value = '';
+
+
+
+        })
+    </script>
+
+</body>
+
+</html>
